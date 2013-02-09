@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trust-Based Shopping Recommander</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Le style -->
+	<style type="text/css">
+	html { height: 100% }
+    body { height: 100%; margin: 0px; padding: 0px; padding-top: 100px; }
+	</style>
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="css/application.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<!-- Javascript -->
+	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-1.8.3.min.js"></script> 	
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
+  </head>
+  <body background = "img/map.jpg">
+	
+
+	<header id="header">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container" align="center">
+					<a class="brand" style="color:orange"><h3><img src="img/trust_logo.jpg" width="70px" height="70px">  Trust-Based Shopping Recommander</h3></a>
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav pull-right">
+							<li class="active"><a href="javascript:$('#myModal').modal('show')" role="button" style="color:orange" class="btn-inverse" data-toggle="modal" ><i class="icon-info-sign icon-white"></i>About</a></li>
+							<li><a href="index.html"style="color:orange"><i class="icon-home icon-white"></i> Home</a></li>
+						</ul>
+					</div>	 	
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container">
+	    <div class="row">
+		<br>
+		<br>
+		<br>
+		<div id ="row">
+		<div id ="results" class="span12" style="text-align: center;">
+	    </div>
+		</div>
+		<div class="span5" style="text-align: center;">
+		    <div class="control-group">
+				<br>
+				<label class="control-label" for="inputcountry" style="color:orange">COUNTRY</label>
+			    <div class="controls">
+				<select id="inputcountry">
+					<option>FRANCE</option>
+					<option>USA</option>
+					<option>INDIFFERENT</option>
+				</select>
+			    </div>
+			    <br>
+				<label class="control-label" for="inputcountry" style="color:orange">LANGUAGE</label>
+				<div class="controls">
+				<select id="inputlanguage">
+					<option>FRENCH</option>
+					<option>ENGLISH</option>
+					<option>INDIFFERENT</option>
+				</select>
+			    </div>
+			    <br>
+				<label class="control-label" for="inputcurrency" style="color:orange">CURRENCY</label>
+				<div class="controls">
+					<select id="inputcurrency">
+						<option>EURO</option>
+						<option>DOLLAR</option>
+						<option>INDIFFERENT</option>
+					</select>
+				</div>
+			</div>
+			<br>	
+			<div class="form-search">
+				<div class="input-append">
+					<input type="text" name="search-area" class="span2 search-query">
+					<button class="btn" onclick="findProducts()"><i class="icon-search icon-white"></i>Search</button>
+				</div>			
+			</div>
+		</div>
+		<br>
+		<div class="span7" style="text-align: center; color: orange;">
+			<h3> Welcome to Trust-Based Shopping Recommander</h3>
+			<img id="lead-image?cachebust=2" src="img/trust-image.jpg" width="300px" height="300px">
+			<h5> Be sure before you buy!!</h5>	
+			<br>
+		</div>
+	</div>
+		
+	<div class="navbar navbar-inverse navbar-fixed-bottom">
+		<div class="navbar-inner">
+			<div class="container" align="center" style="color:orange">
+				<h5>Copyright @Telecom St-Etienne 2013 </h5>
+			</div>
+		</div>
+	</div>
+	
+	<div id = "myModal" class="modal hide fade"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			<h3 style="color:orange">Trust-Based Shopping Recommander </h3>
+			<br>
+			<h5 style="color:orange">By: Nizar BELMAHFOUD & Mohammed Amine EL GHARBI</h5>	
+		</div>
+		<div class="modal-body">
+		<p>During our studies at Telecom Saint-Etienne, we were conducted to do this application as project in the last year of the engineering cycle.</p>
+		<p>This application is done to help people to buy products from internet, the users can ask their friends about those products before they buy them.</p>
+		<p>This is a P2P application developed on the Social Network FACEBOOK, because it's the best way to have informations from a good friends. </p>
+		<p>And we hope that you will like our application, enjoy it!!</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-large btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
+		</div>
+  </div>
+  </body>
+</html>
