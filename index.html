@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Trust-Based Shopping Recommander</title>
-    <meta charset="utf-8">
+    	<title>Trust-Based Shopping Recommander</title>
+    	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Le style -->
 	<style type="text/css">
-	html { height: 100% }
-    body { height: 100%; margin: 0px; padding: 0px; padding-top: 100px; }
+	  html { height: 100% }
+          body { height: 100%; margin: 0px; padding: 0px; padding-top: 100px; }
 	</style>
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link href="css/application.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
+    	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<!-- Javascript -->
 	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/jquery-1.8.3.min.js"></script> 	
-    <script src="js/bootstrap.min.js"></script>
+    	<script src="js/jquery-1.8.3.min.js"></script> 	
+    	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-transition.js"></script>
 	<script src="js/bootstrap-alert.js"></script>
 	<script src="js/bootstrap-modal.js"></script>
@@ -54,46 +54,38 @@
 		</div>
 	</header>
 	
-	<div class="container">
-	    <div class="row">
-		<br>
-		<br>
-		<br>
-		<div id ="row">
-		<div id ="results" class="span12" style="text-align: center;">
-	    </div>
+	<div  class="container">
+		<div class="row">
+			<div id ="results" class="span12" style="text-align: center;">
+			</div>
+			<div id ="moreresults" class="span12" style="text-align: center;">
+			</div>
 		</div>
+	    <div id="content" class="row">
+		<br>
 		<div class="span5" style="text-align: center;">
 		    <div class="control-group">
+				<br>
+				<br>
+				<br>
 				<br>
 				<label class="control-label" for="inputcountry" style="color:orange">COUNTRY</label>
 			    <div class="controls">
 				<select id="inputcountry">
 					<option>FRANCE</option>
 					<option>USA</option>
-					<option>INDIFFERENT</option>
+					<option>UNITED KINGDOM</option>
+					<option>NETHERLAND</option>
+					<option>CANADA</option>
+					<option>CHINA</option>
+					<option>GERMANY</option>
+					<option>SPAIN</option>
 				</select>
-			    </div>
-			    <br>
-				<label class="control-label" for="inputcountry" style="color:orange">LANGUAGE</label>
-				<div class="controls">
-				<select id="inputlanguage">
-					<option>FRENCH</option>
-					<option>ENGLISH</option>
-					<option>INDIFFERENT</option>
-				</select>
-			    </div>
-			    <br>
-				<label class="control-label" for="inputcurrency" style="color:orange">CURRENCY</label>
-				<div class="controls">
-					<select id="inputcurrency">
-						<option>EURO</option>
-						<option>DOLLAR</option>
-						<option>INDIFFERENT</option>
-					</select>
-				</div>
+			    </div>			
 			</div>
-			<br>	
+			<br>
+            <label style="color:orange"><h4>What do you want ?</h4></label>	
+			<br>
 			<div class="form-search">
 				<div class="input-append">
 					<input type="text" name="search-area" class="span2 search-query">
@@ -108,6 +100,7 @@
 			<h5> Be sure before you buy!!</h5>	
 			<br>
 		</div>
+	</div>
 	</div>
 		
 	<div class="navbar navbar-inverse navbar-fixed-bottom">
