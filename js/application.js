@@ -1,5 +1,4 @@
-
-var country,language,currency,subject,data;
+var url,country,language,currency,subject,data;
 
 function findProducts(){	
 		currency = document.getElementById("inputcurrency").value;
@@ -17,10 +16,19 @@ function findProducts(){
 		if(language == "FRENCH") language ="fr";
 		else{ if(language == "ENGLISH") language ="en";
 		      else language = "";
-			}		
+			}
+	if(currency == "" && language == "" && country == "" ) url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject;
+        if (currency != "" && language == "" && country == "" )url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject+"&currency="+currency;
+	if (currency == "" && language != "" && country == "" )url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject+"&language="+language;
+	if( currency == "" && language == "" && country != "" ) url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject+"&country="+country;
+	if( currency == "" && language != "" && country != "" ) url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject+"&country="+country+"&language="+language;     	
+	if( currency != "" && language == "" && country != "" ) url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject+"&country="+country+"&currency="+currency;
+	if( currency != "" && language != "" && country == "" ) url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&q="+subject+"&language="+language+"&currency="+currency;
+	else url= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&country="+country+"&language="+language+"&currency="+currency+"&q="+subject;
+        
         $.ajax({
 	    type: "GET",
-		url: "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&country="+country+"&language="+language+"&currency="+currency+"&q="+subject+"",
+		url: url,
 		dataType: "json",
 		success: function(msg){
             var donnees = msg['items'];
