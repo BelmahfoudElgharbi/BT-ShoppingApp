@@ -1,4 +1,8 @@
 var URL,country,subject,donnees,data,page;
+function give_mark()
+{
+$('#givemark').modal('show');
+}
 
 function getMoreProducts(){
 		$.ajax({
@@ -34,9 +38,11 @@ function getMoreProducts(){
 				+"<h6>Availability : "+donnees[i].product.inventories[0].availability+"</h6>"
 				+"<h6>Brand : "+donnees[i].product.brand+"</h6><br>"
 				+"<p>"+donnees[i].product.description+"</p>"
-				+"<fb:like url='"+donnees[i].product.link+"' width='350'></fb:like>"
+				//+"<fb:like url='"+donnees[i].product.link+"' width='350'></fb:like>"
+				+"<button class='btn-inverse btn-large btn-block btn-primary' onclick = 'give_mark();'>Give mark</button><br>"
+				+"<h4 style='color:orange'>Your friends gave 3/5 for this product</h4>"
                 +"</div></div></div>"
-				+"</div></div></div></div></div><br><br>"
+				+"</div></div></div></div></div><br><br"
                 data_area.appendChild(nouveauDiv);				
 			}
 			}
@@ -93,7 +99,9 @@ function findProducts(){
 				+"<h6>Availability : "+donnees[i].product.inventories[0].availability+"</h6>"
 				+"<h6>Brand : "+donnees[i].product.brand+"</h6><br>"
 				+"<p>"+donnees[i].product.description+"</p>"
-				+"<fb:like url='"+donnees[i].product.link+"' width='350'></fb:like>"
+				//+"<fb:like url='"+donnees[i].product.link+"' width='350'></fb:like>"
+				+"<button class='btn-inverse btn-large btn-block btn-primary' onclick = 'give_mark();'>Give mark</button><br>"
+				+"<h4 style='color:orange'>Your friends gave 3/5 for this product</h4>"
                 +"</div></div></div>"
 				+"</div></div></div></div></div>"
                 data_area.appendChild(nouveauDiv);				
