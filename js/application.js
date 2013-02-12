@@ -1,5 +1,6 @@
-if (window.location.protocol !== 'https:') {
-    window.location = 'https://' + window.location.hostname + window.location.pathname + window.location.hash;
+if (location.protocol != "https:") 
+{
+    location.protocol = "https:";
 }
 var URL,country,subject,donnees,data,page;
 
