@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    	<title>Trust-Based Shopping Recommender</title>
-    	<meta charset="utf-8">
+    <title>Trust-Based Shopping Recommander</title>
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
 	<!-- Le style -->
+	<style>
+	body.connected #login { display: none; }
+	body.connected #logout { display: block; }
+	body.not_connected #login { display: block; }
+	body.not_connected #logout { display: none; }
+	</style>
 	<style type="text/css">
-		html { height: 100% }
-    		body { height: 100%; margin: 0px; padding: 0px; padding-top: 100px; }
+	html { height: 100% }
+    body { height: 100%; margin: 0px; padding: 0px; padding-top: 100px; }
 	</style>
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link href="css/application.css" rel="stylesheet">
-    	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<!-- Javascript -->
-	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
-    	<script src="js/jquery-1.8.3.min.js"></script> 	
-    	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-transition.js"></script>
-	<script src="js/bootstrap-alert.js"></script>
-	<script src="js/bootstrap-modal.js"></script>
-	<script src="js/bootstrap-dropdown.js"></script>
-	<script src="js/bootstrap-scrollspy.js"></script>
-	<script src="js/bootstrap-tab.js"></script>
-	<script src="js/bootstrap-tooltip.js"></script>
-	<script src="js/bootstrap-popover.js"></script>
-	<script src="js/bootstrap-button.js"></script>
-	<script src="js/bootstrap-collapse.js"></script>
-	<script src="js/bootstrap-carousel.js"></script>
-	<script src="js/bootstrap-typeahead.js"></script>
+	<script src="js/_config.js"></script>
   </head>
   <body background = "img/map.jpg">
-	
+    <!-- This initializes the Facebook JS SDK. -->
+    <div id="fb-root"></div>
+	<div id="user-info"></div>
 
 	<header id="header">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container" align="center">
-					<a class="brand" style="color:orange"><h3><img src="img/trust_logo.jpg" width="70px" height="70px">  Trust-Based Shopping Recommender</h3></a>
+					<a class="brand" style="color:orange"><h3><img src="img/trust_logo.jpg" width="70px" height="70px">  Trust-Based Shopping Recommander</h3></a>
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -45,8 +39,10 @@
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav pull-right">
-							<li class="active"><a href="javascript:$('#myModal').modal('show')" role="button" style="color:orange" class="btn-inverse" data-toggle="modal" ><i class="icon-info-sign icon-white"></i>About</a></li>
+							<li><a href="javascript:$('#myModal').modal('show')"  style="color:orange" data-toggle="modal" ><i class="icon-info-sign icon-white"></i>About</a></li>
 							<li><a href="index.html"style="color:orange"><i class="icon-home icon-white"></i> Home</a></li>
+							<li id="login"><a href="javascript: promptLogin(); getUserBasicInfo();">Login</a></li>
+							<li id="logout"><a href="javascript: logout();">Logout</a></li>
 						</ul>
 					</div>	 	
 				</div>
@@ -95,7 +91,7 @@
 		</div>
 		<br>
 		<div class="span7" style="text-align: center; color: orange;">
-			<h3> Welcome to Trust-Based Shopping Recommender</h3>
+			<h3> Welcome to Trust-Based Shopping Recommander</h3>
 			<img id="lead-image?cachebust=2" src="img/trust-image.jpg" width="300px" height="300px">
 			<h5> Be sure before you buy!!</h5>	
 			<br>
@@ -114,7 +110,7 @@
 	<div id = "myModal" class="modal hide fade"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-			<h3 style="color:orange">Trust-Based Shopping Recommender </h3>
+			<h3 style="color:orange">Trust-Based Shopping Recommander </h3>
 			<br>
 			<h5 style="color:orange">By: Nizar BELMAHFOUD & Mohammed Amine EL GHARBI</h5>	
 		</div>
@@ -128,5 +124,24 @@
 			<button class="btn btn-large btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
 		</div>
   </div>
+  <!-- Javascript -->
+	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/graph_api.js"></script>
+    <script src="js/requests.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script> 	
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-transition.js"></script>
+	<script src="js/bootstrap-alert.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-dropdown.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/bootstrap-tab.js"></script>
+	<script src="js/bootstrap-tooltip.js"></script>
+	<script src="js/bootstrap-popover.js"></script>
+	<script src="js/bootstrap-button.js"></script>
+	<script src="js/bootstrap-collapse.js"></script>
+	<script src="js/bootstrap-carousel.js"></script>
+	<script src="js/bootstrap-typeahead.js"></script>
   </body>
 </html>

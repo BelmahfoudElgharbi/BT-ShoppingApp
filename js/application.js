@@ -9,11 +9,11 @@ function getMoreProducts(){
 			URL = msg.nextLink+"&key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U";
 			page=page+1;
 			pos=page*25;
-            		var donnees = msg['items'];
+            var donnees = msg['items'];
 			var data_area = document.getElementById("results");
 			for (var i=0; i<donnees.length; i++) {
 				pos=pos+i;
-               			 nouveauDiv = document.createElement("div");
+                nouveauDiv = document.createElement("div");
 				nouveauDiv.innerHTML = "<div class='span12' style='text-align: center;'>"
 				+"<div class='accordion' id='accordion2'>"
 				+"<div class='accordion-group'>"
@@ -24,19 +24,20 @@ function getMoreProducts(){
 				+"<div id='collapse"+pos+"' class='accordion-body collapse'>"
 				+"<div class='accordion-inner'>"
 				+"<div class='media' style='color:orange'>"
-			        +"<a class='pull-left' href="+donnees[i].product.link+">"
+			    +"<a class='pull-left' href="+donnees[i].product.link+">"
 				+"<img class='img-polaroid' width='200' height='100' src="+donnees[i].product.images[0].link+" data-src='holder.js/64x64'>"
 				+"</a>"
 				+"<div class='media-body'>"
-                		+"<a href="+donnees[i].product.link+"><h4 class='media-heading' style='color:orange'>View product in original website</h4></a>"
-                		+"<div class='media' style='color:white'>"
+                +"<a href="+donnees[i].product.link+"><h4 class='media-heading' style='color:orange'>View product in original website</h4></a>"
+                +"<div class='media' style='color:white'>"
 				+"<h5>Description :</h5>"
 				+"<h6>Availability : "+donnees[i].product.inventories[0].availability+"</h6>"
 				+"<h6>Brand : "+donnees[i].product.brand+"</h6><br>"
 				+"<p>"+donnees[i].product.description+"</p>"
-                		+"</div></div></div>"
-				+"</div></div></div></div></div>"
-                		data_area.appendChild(nouveauDiv);				
+				+"<fb:like url='"+donnees[i].product.link+"' width='350'></fb:like>"
+                +"</div></div></div>"
+				+"</div></div></div></div></div><br><br>"
+                data_area.appendChild(nouveauDiv);				
 			}
 			}
 		});
@@ -71,7 +72,7 @@ function findProducts(){
 			var div = document.getElementById("content");
 			div.parentNode.removeChild(div);
 			for (var i=0; i<donnees.length; i++) {    
-                		nouveauDiv = document.createElement("div");
+                nouveauDiv = document.createElement("div");
 				nouveauDiv.innerHTML = "<div class='span12' style='text-align: center;'>"
 				+"<div class='accordion' id='accordion2'>"
 				+"<div class='accordion-group'>"
@@ -82,19 +83,20 @@ function findProducts(){
 				+"<div id='collapse"+i+"' class='accordion-body collapse'>"
 				+"<div class='accordion-inner'>"
 				+"<div class='media' style='color:orange'>"
-			    	+"<a class='pull-left' href="+donnees[i].product.link+">"
+			    +"<a class='pull-left' href="+donnees[i].product.link+">"
 				+"<img class='img-polaroid' width='200' height='100' src="+donnees[i].product.images[0].link+" data-src='holder.js/64x64'>"
 				+"</a>"
 				+"<div class='media-body'>"
-                		+"<a href="+donnees[i].product.link+"><h4 class='media-heading' style='color:orange'>View product in original website</h4></a>"
-                		+"<div class='media' style='color:white'>"
+                +"<a href="+donnees[i].product.link+"><h4 class='media-heading' style='color:orange'>View product in original website</h4></a>"
+                +"<div class='media' style='color:white'>"
 				+"<h5>Description :</h5>"
 				+"<h6>Availability : "+donnees[i].product.inventories[0].availability+"</h6>"
 				+"<h6>Brand : "+donnees[i].product.brand+"</h6><br>"
 				+"<p>"+donnees[i].product.description+"</p>"
-               		        +"</div></div></div>"
+				+"<fb:like url='"+donnees[i].product.link+"' width='350'></fb:like>"
+                +"</div></div></div>"
 				+"</div></div></div></div></div>"
-                		data_area.appendChild(nouveauDiv);				
+                data_area.appendChild(nouveauDiv);				
 			}
 			if( msg.totalItems > 25)
 			{   page=page+1;
