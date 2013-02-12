@@ -1,7 +1,3 @@
-if (location.protocol != "https:") 
-{
-    location.protocol = "https:";
-}
 var URL,country,subject,donnees,data,page;
 
 function getMoreProducts(){
