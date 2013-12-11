@@ -10,7 +10,7 @@ function getMoreProducts(){
 		url: URL,
 		dataType: "json",
 		success: function(msg){
-			URL = msg.nextLink+"&key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U";
+			URL = msg.nextLink+"&key=cMwjc0pudWcSEPM9YcWEPtT3";
 			page=page+1;
 			pos=page*25;
             var donnees = msg['items'];
@@ -62,7 +62,7 @@ function findProducts(){
         if(country == "GERMANY") country = "DE";	
 		if(country == "SPAIN") country ="ES";
 		if(country == "UNITED KINGDOM") country ="GB";
-		URL= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U&country="+country+"&q="+subject;      
+		URL= "https://www.googleapis.com/shopping/search/v1/public/products?key=cMwjc0pudWcSEPM9YcWEPtT3&country="+country+"&q="+subject;      
    
 		$.ajax({
 	    type: "GET",
@@ -108,7 +108,7 @@ function findProducts(){
 			}
 			if( msg.totalItems > 25)
 			{   page=page+1;
-				URL = msg.nextLink+"&key=AIzaSyDnJ8FcO1c0l_fmnmYw2mEB4nLnOFk2d5U";
+				URL = msg.nextLink+"&key=cMwjc0pudWcSEPM9YcWEPtT3";
 				var more_products = document.getElementById("moreresults");
 				newbutton = document.createElement("div");
 				newbutton.innerHTML ="<button class='btn-inverse btn-large btn-block btn-primary' type='button' onclick = 'getMoreProducts(URL)'>View more products</button><br><br><br><br><br>"
