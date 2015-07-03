@@ -62,7 +62,7 @@ function findProducts(){
         if(country == "GERMANY") country = "DE";	
 		if(country == "SPAIN") country ="ES";
 		if(country == "UNITED KINGDOM") country ="GB";
-		URL= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyBhTUudJSb6He_d12ZIrQ_cvYmEYeJWkW4&country="+country+"&q="+subject;      
+		URL= "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyD54Sjdphp7axnvjRCSekn0e-6CxDfGwog&country="+country+"&q="+subject;      
    
 		$.ajax({
 	    type: "GET",
