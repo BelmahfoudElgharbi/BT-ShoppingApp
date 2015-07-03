@@ -108,7 +108,7 @@ function findProducts(){
 			}
 			if( msg.totalItems > 25)
 			{   page=page+1;
-				URL = msg.nextLink+"&key=AIzaSyBhTUudJSb6He_d12ZIrQ_cvYmEYeJWkW4";
+				URL = msg.nextLink+"&key=AIzaSyD54Sjdphp7axnvjRCSekn0e-6CxDfGwog";
 				var more_products = document.getElementById("moreresults");
 				newbutton = document.createElement("div");
 				newbutton.innerHTML ="<button class='btn-inverse btn-large btn-block btn-primary' type='button' onclick = 'getMoreProducts(URL)'>View more products</button><br><br><br><br><br>"
