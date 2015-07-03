@@ -10,7 +10,7 @@ function getMoreProducts(){
 		url: URL,
 		dataType: "json",
 		success: function(msg){
-			URL = msg.nextLink+"&key=AIzaSyBhTUudJSb6He_d12ZIrQ_cvYmEYeJWkW4";
+			URL = msg.nextLink+"&key=AIzaSyD54Sjdphp7axnvjRCSekn0e-6CxDfGwog";
 			page=page+1;
 			pos=page*25;
             var donnees = msg['items'];
